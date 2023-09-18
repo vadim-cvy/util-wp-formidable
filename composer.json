@@ -1,0 +1,8 @@
+{
+  "name": "cvy/util-wp-formidable",
+  "autoload": {
+    "psr-4": {
+      "Cvy\\WP\\Formidable\\": "src/"
+    }
+  }
+}
