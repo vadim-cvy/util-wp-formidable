@@ -28,6 +28,12 @@ class Entry
     {
       $field = \FrmField::getOne( $meta_item->field_id );
 
+      // Formidable stores not only fields in metadata but some other data as well
+      if ( ! $field )
+      {
+        continue;
+      }
+
       $key = str_replace( $this->field_keys_prefix, '', $field->field_key );
 
       $values[ $key ] = $this->normalize_field_value( $meta_item->meta_value, $field );
